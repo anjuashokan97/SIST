@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}File Page{% endblock %}
+
+{% block content %}
+<h1 style="color:green; margin-top:25px; font-family:times new roman;"><center>Programming World</center></h1>
+<div class="container text-center" style="font-family:times new roman;">
+    {% for lang in card %}
+<div class="card text-center my-5 mx-3 border border-info border-radius" style="width:200px;display:inline-block">
+  <img src="{{lang.image}}" class="card-img-top" alt="..." width="200px" height="250px">
+  <div class="card-body">
+      <h5 class="card-title">Product: <b>{{lang.name}}</b></h5>
+      <p class="card-text">Trainer: <b>{{lang.trainer}}</b></p>
+    <a href="{% url 'contact' %}" class="btn btn-outline-primary">Learn Now</a>
+  </div>
+</div>
+    {% endfor %}
+    </div>
+
+{% endblock %}

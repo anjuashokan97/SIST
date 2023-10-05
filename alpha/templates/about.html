@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}About Page{% endblock %}
+
+{% block content %}
+<h1 style="color:blue; font-family:times new roman;" class="m-4"><center>..!Introduction to Programming lang!..</center></h1>
+
+{% for data in abt %}
+<div class="conatiner w-80 bg-success text-white p-3 m-3">
+    <h1>{{data.name}}</h1>
+    <p>{{data.description}}</p>
+</div>
+{% endfor %}
+
+{% endblock %}
+
